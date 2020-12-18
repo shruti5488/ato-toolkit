@@ -1,4 +1,4 @@
-# Deployment of a Stig compliant Windows VM
+# Deployment of a stig-compliant Windows VM
 
 [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fshruti5488%2Fato-toolkit%2Fmaster%2Fstig%2Fwindows%2Fazuredeploy.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2Fshruti5488%2Fato-toolkit%2Fmaster%2Fstig%2Fwindows%2FcreateUiDefinition.json)
 [![Deploy To Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.svg?sanitize=true)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fshruti5488%2Fato-toolkit%2Fmaster%2Fstig%2Fwindows%2Fazuredeploy.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2Fshruti5488%2Fato-toolkit%2Fmaster%2Fstig%2Fwindows%2FcreateUiDefinition.json)
