@@ -266,8 +266,7 @@
             "name": "[parameters('vmName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]",
-                "[parameters('vmAvailabilitySetName')]"
+                "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
             ],
             "properties": {
                 "hardwareProfile": {
