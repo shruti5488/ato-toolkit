@@ -13,3 +13,5 @@ sed 's/yum -y update/yum -y update --exclude=WALinuxAgent/g' $STIG_FILE > script
 echo "Running script-stig-updated.sh to deploy STIGs..."
 bash script-stig-updated.sh
 echo "Deployment completed successfully."
+echo "Running oscap scanner to evaluate if the stig is applied to the VM."
+oscap xccdf eval --profile stig-rhel7-disa --report scanned-report-stig.htm /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml

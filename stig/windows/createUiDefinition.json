@@ -60,13 +60,16 @@
                         "name": "OSVersion",
                         "type": "Microsoft.Common.DropDown",
                         "label": "Windows OS Version",
-                        "defaultValue": "2019-Datacenter",
                         "toolTip": "The OS Version for the VM Image",
                         "constraints": {
                             "allowedValues": [
                                 {
                                     "value": "2019-Datacenter",
                                     "label": "2019-Datacenter"
+                                },
+                                {
+                                    "value": "2016-Datacenter",
+                                    "label": "2016-Datacenter"
                                 }
                             ],
                             "required": true
@@ -93,6 +96,26 @@
                         "toolTip": "Availability Set Name for the VM.",
                         "constraints": {
                             "required": false
+                        },
+                        "visible": true
+                    },
+                    {
+                        "name": "vmAvailabilityFaultDomains",
+                        "type": "Microsoft.Common.TextBox",
+                        "label": "Fault Domain Number",
+                        "toolTip": "Virtual machines in the same fault domain share a common power source and physical network switch.",
+                        "constraints": {
+                            "required": true
+                        },
+                        "visible": true
+                    },
+                    {
+                        "name": "vmAvailabilityUpdateDomains",
+                        "type": "Microsoft.Common.TextBox",
+                        "label": "Update Domain Number",
+                        "toolTip": "Virtual machines in the same update domain will be restarted together during planned maintenance. Azure never restarts more than one update domain at a time.",
+                        "constraints": {
+                            "required": true
                         },
                         "visible": true
                     },
@@ -181,6 +204,8 @@
             "subnetPrefix": "[steps('VirtualMachineConfig').vmVirtualNetwork.subnets.subnet1.addressPrefix]",
             "subnetName": "[steps('VirtualMachineConfig').vmVirtualNetwork.subnets.subnet1.name]",
             "vmAvailabilitySetName": "[steps('VirtualMachineConfig').vmAvailabilitySetName]",
+            "vmAvailabilityFaultDomains": "[steps('VirtualMachineConfig').vmAvailabilityFaultDomains]",
+            "vmAvailabilityUpdateDomains": "[steps('VirtualMachineConfig').vmAvailabilityUpdateDomains]",
             "diagnosticStorageResourceId": "[steps('DiagnosticSettingsConfig').diagnosticStorageResourceId]",
             "logAnalyticsWorkspaceId": "[steps('DiagnosticSettingsConfig').logAnalyticsWorkspaceId]"
         }
