@@ -14,4 +14,4 @@ echo "Running script-stig-updated.sh to deploy STIGs..."
 bash script-stig-updated.sh
 echo "Deployment completed successfully."
 echo "Running oscap scanner to evaluate if the stig is applied to the VM."
-oscap xccdf eval --profile stig-rhel7-disa --report scanned-report-stig.htm /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml
+oscap xccdf eval --profile stig-rhel7-disa --results results.xml --verbose ERROR --verbose-log-file log.txt --report coverage_report.htm /usr/share/xml/scap/ssg/content/ssg-rhel7-ds.xml
