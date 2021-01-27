@@ -523,7 +523,7 @@
                 },
                 "protectedSettings": {
                     "fileUris": "[variables('scriptFiles')]",
-                    "commandToExecute": "[concat('bash ', variables('deploySTIGFile'), ' ' , variables('images')[parameters('osVersion')].stigScriptFileName, ' >> DeploySTIG.logs.txt')]"
+                    "commandToExecute": "[concat('bash ', variables('deploySTIGFile'), ' ' , variables('images')[parameters('osVersion')].stigScriptFileName, ' > DeploySTIG.logs.txt 2>&1')]"
                 }
             }
         },
